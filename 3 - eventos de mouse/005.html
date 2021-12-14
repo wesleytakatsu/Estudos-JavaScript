@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento de DOM</title>
+    <style>
+        body{
+            background: rgb(146, 219, 253);
+            font: normal 18pt Arial;
+            color: rgb(36, 83, 4);
+        }
+    </style>
+</head>
+<body>
+    <h1>Treino</h1>
+    <p>Um parágrafo</p>
+    <p>Treinando <strong>DOM</strong> em javascript</p>
+    <div id="msg">Uma divisória</div>
+
+    <script>
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Substituindo o texto da DIV...'
+        //window.document.getElementById('msg').innerText = 'Substituindo diretamente'
+        //Mesmo esquema para selecionar por id, name, class e etc...
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'  //muda a cor do texto da div da classe msg
+    </script>
+</body>
+</html>
